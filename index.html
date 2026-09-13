@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bangladesh Gadget — Genuine electronics, shipped from the USA</title>
+<meta name="description" content="Bangladesh Gadget imports genuine electronics and fashion directly from the United States, with real-time shipment tracking and weight-based pricing." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%230B1524%22/><path d=%22M20 62 L50 30 L80 62%22 stroke=%22%23E63C26%22 stroke-width=%228%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="toast" class="toast" aria-live="polite"></div>
+
+<!-- Utility bar -->
+<div class="util-bar">
+  <div class="wrap util-inner">
+    <div class="util-left">
+      <a href="tel:01301367205">📞 01301367205</a>
+      <a href="tel:01571507618">01571507618</a>
+      <a href="mailto:bangladeshgadget2@gmail.com" class="hide-sm">✉ bangladeshgadget2@gmail.com</a>
+    </div>
+    <div class="util-right">
+      <a href="#/track">Track an order</a>
+      <a href="#/about">About us</a>
+      <a href="#/contact">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Main header -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#/home" class="logo" aria-label="Bangladesh Gadget home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="34" height="34"><rect width="48" height="48" rx="10" fill="#0B1524"/><path d="M10 30 L24 14 L38 30" stroke="#E63C26" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 30 L14 36 L34 36 L34 30" stroke="#FFB020" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="logo-text">Bangladesh Gadget</span>
+    </a>
+
+    <form class="search-form" id="searchForm">
+      <input type="text" id="searchInput" placeholder="Search phones, laptops, drones, fashion…" autocomplete="off" />
+      <button type="submit" aria-label="Search">Search</button>
+    </form>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="acctBtn" title="Account">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span id="acctLabel" class="hide-sm">Account</span>
+      </button>
+      <a href="#/track" class="icon-btn" title="My orders">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7l8-4 8 4-8 4-8-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 7v10l8 4 8-4V7" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span class="hide-sm">Orders</span>
+      </a>
+      <a href="#/cart" class="icon-btn" id="cartBtn" title="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l2.2 11.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="20" r="1.4" fill="currentColor"/><circle cx="17.5" cy="20" r="1.4" fill="currentColor"/></svg>
+        <span class="hide-sm">Cart</span>
+        <span class="badge" id="cartCount">0</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="cat-nav" aria-label="Product categories">
+    <div class="wrap cat-nav-inner" id="catNav"></div>
+  </nav>
+</header>
+
+<main id="view" class="wrap"></main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="logo footer-logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="30" height="30"><rect width="48" height="48" rx="10" fill="#12233b"/><path d="M10 30 L24 14 L38 30" stroke="#E63C26" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 30 L14 36 L34 36 L34 30" stroke="#FFB020" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="logo-text light">Bangladesh Gadget</span>
+      </div>
+      <p class="footer-tag">Genuine electronics and fashion, imported directly from the United States to your door in Bangladesh.</p>
+      <div class="trust-mini">100% genuine or ৳500,000 — our promise.</div>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <ul id="footerCats" class="footer-links"></ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="#/about">About us</a></li>
+        <li><a href="#/contact">Contact</a></li>
+        <li><a href="#/track">Track your order</a></li>
+        <li><a href="#/faq">Shipping &amp; pricing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reach us</h4>
+      <ul class="footer-links">
+        <li>Chittagong, Bangladesh</li>
+        <li><a href="mailto:bangladeshgadget2@gmail.com">bangladeshgadget2@gmail.com</a></li>
+        <li><a href="tel:01301367205">01301367205</a></li>
+        <li><a href="tel:01571507618">01571507618</a></li>
+      </ul>
+      <div class="wa-row">
+        <a class="wa-btn" target="_blank" href="https://wa.me/8801301367205">WhatsApp 1</a>
+        <a class="wa-btn" target="_blank" href="https://wa.me/8801571507618">WhatsApp 2</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Bangladesh Gadget. All rights reserved.</span>
+    <span>Prices are shown in BDT (৳) and include our authenticity guarantee.</span>
+  </div>
+</footer>
+
+<!-- Chat widget -->
+<button id="chatToggle" class="chat-fab" title="Chat with us">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M21 12a8 8 0 1 1-3.2-6.4" stroke="currentColor" stroke-width="0"/><path d="M4 20l1.4-4.2A8 8 0 1 1 9 19.3L4 20Z" stroke="currentColor" stroke-width="1.7" fill="#fff" stroke-linejoin="round"/></svg>
+</button>
+<div id="chatPanel" class="chat-panel hidden">
+  <div class="chat-head">
+    <span>Chat with Bangladesh Gadget</span>
+    <button id="chatClose" aria-label="Close chat">✕</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="chat-msg bot">Hi! 👋 Ask us about any product, shipping time, or your order — a team member replies here shortly, or message us directly on WhatsApp.</div>
+  </div>
+  <div class="chat-wa">
+    <a target="_blank" href="https://wa.me/8801301367205">Continue on WhatsApp →</a>
+  </div>
+  <form id="chatForm" class="chat-input-row">
+    <input type="text" id="chatInput" placeholder="Type a message…" autocomplete="off" />
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<!-- Modal root -->
+<div id="modalRoot"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
